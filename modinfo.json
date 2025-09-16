@@ -1,0 +1,14 @@
+{
+  "$schema": "https://moddbcdn.vintagestory.at/schema/modinfo.latest.json",
+  "type": "code",
+  "modid": "batchmolds",
+  "name": "Batch Production Molds",
+  "authors": [
+    "DavidLokison"
+  ],
+  "description": "Adds 'Vanilla+' batch molds for casting multiple of the same work piece in one spot.",
+  "version": "1.0.0",
+  "dependencies": {
+    "game": "1.21.0"
+  }
+}

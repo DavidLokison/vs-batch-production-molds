@@ -1,0 +1,102 @@
+{
+	"editor": {
+		"allAngles": false,
+		"entityTextureMode": false
+	},
+	"textureWidth": 16,
+	"textureHeight": 16,
+	"textureSizes": {
+	},
+	"textures": {
+		"other": "block/clay/ceramic",
+		"floor": "block/clay/ceramic-dark"
+	},
+	"elements": [
+		{
+			"name": "Mold4-W",
+			"from": [ 1.5, 0.0, 4.0 ],
+			"to": [ 2.5, 4.0, 13.0 ],
+			"faces": {
+				"north": { "texture": "#other", "uv": [ 0.0, 0.0, 1.0, 4.0 ] },
+				"east": { "texture": "#other", "uv": [ 0.0, 0.0, 9.0, 4.0 ] },
+				"south": { "texture": "#other", "uv": [ 0.0, 0.0, 1.0, 4.0 ] },
+				"west": { "texture": "#other", "uv": [ 0.0, 0.0, 9.0, 4.0 ] },
+				"up": { "texture": "#other", "uv": [ 0.0, 0.0, 1.0, 9.0 ] },
+				"down": { "texture": "#other", "uv": [ 0.0, 0.0, 1.0, 9.0 ] }
+			}
+		},
+		{
+			"name": "Mold4-E",
+			"from": [ 13.5, 0.0, 4.0 ],
+			"to": [ 14.5, 4.0, 13.0 ],
+			"faces": {
+				"north": { "texture": "#other", "uv": [ 0.0, 0.0, 1.0, 4.0 ] },
+				"east": { "texture": "#other", "uv": [ 0.0, 0.0, 9.0, 4.0 ] },
+				"south": { "texture": "#other", "uv": [ 0.0, 0.0, 1.0, 4.0 ] },
+				"west": { "texture": "#other", "uv": [ 0.0, 0.0, 9.0, 4.0 ] },
+				"up": { "texture": "#other", "uv": [ 0.0, 0.0, 1.0, 9.0 ] },
+				"down": { "texture": "#other", "uv": [ 0.0, 0.0, 1.0, 9.0 ] }
+			}
+		},
+		{
+			"name": "Mold4-S",
+			"from": [ 2.5, 0.0, 12.0 ],
+			"to": [ 13.5, 4.0, 13.0 ],
+			"faces": {
+				"north": { "texture": "#other", "uv": [ 0.0, 0.0, 11.0, 4.0 ] },
+				"south": { "texture": "#other", "uv": [ 0.0, 0.0, 11.0, 4.0 ] },
+				"up": { "texture": "#other", "uv": [ 0.0, 0.0, 11.0, 1.0 ] },
+				"down": { "texture": "#other", "uv": [ 0.0, 0.0, 11.0, 1.0 ] }
+			}
+		},
+		{
+			"name": "Mold4-N",
+			"from": [ 2.5, 0.0, 4.0 ],
+			"to": [ 13.5, 4.0, 5.0 ],
+			"faces": {
+				"north": { "texture": "#other", "uv": [ 0.0, 0.0, 11.0, 4.0 ] },
+				"south": { "texture": "#other", "uv": [ 0.0, 0.0, 11.0, 4.0 ] },
+				"up": { "texture": "#other", "uv": [ 0.0, 0.0, 11.0, 1.0 ] },
+				"down": { "texture": "#other", "uv": [ 0.0, 0.0, 11.0, 1.0 ] }
+			}
+		},
+		{
+			"name": "Mold4-Floor",
+			"from": [ 2.5, 0.0, 5.0 ],
+			"to": [ 13.5, 1.0, 12.0 ],
+			"faces": {
+				"up": { "texture": "#floor", "uv": [ 0.0, 0.0, 11.0, 7.0 ] },
+				"down": { "texture": "#other", "uv": [ 0.0, 0.0, 11.0, 7.0 ] }
+			}
+		},
+		{
+			"name": "Mold4-InnerW",
+			"from": [ 4.5, 1.0, 5.0 ],
+			"to": [ 5.5, 4.0, 12.0 ],
+			"faces": {
+				"east": { "texture": "#other", "uv": [ 0.0, 0.0, 7.0, 3.0 ] },
+				"west": { "texture": "#other", "uv": [ 0.0, 0.0, 7.0, 3.0 ] },
+				"up": { "texture": "#other", "uv": [ 0.0, 0.0, 1.0, 7.0 ] }
+			}
+		},
+		{
+			"name": "Mold4-InnerE",
+			"from": [ 10.5, 1.0, 5.0 ],
+			"to": [ 11.5, 4.0, 12.0 ],
+			"faces": {
+				"east": { "texture": "#other", "uv": [ 0.0, 0.0, 7.0, 3.0 ] },
+				"west": { "texture": "#other", "uv": [ 0.0, 0.0, 7.0, 3.0 ] },
+				"up": { "texture": "#other", "uv": [ 0.0, 0.0, 1.0, 7.0 ] }
+			}
+		},
+		{
+			"name": "Mold4-InnerC",
+			"from": [ 7.5, 1.0, 5.0 ],
+			"to": [ 8.5, 4.0, 12.0 ],
+			"faces": {
+				"east": { "texture": "#other", "uv": [ 0.0, 0.0, 7.0, 3.0 ] },
+				"west": { "texture": "#other", "uv": [ 0.0, 0.0, 7.0, 3.0 ] },
+				"up": { "texture": "#other", "uv": [ 0.0, 0.0, 1.0, 7.0 ] }
+			}
+		}
+	]}

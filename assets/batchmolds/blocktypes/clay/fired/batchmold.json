@@ -1,0 +1,122 @@
+{
+	code: "batchmold",
+	class: "BatchMolds.BlockBatchMold",
+	entityClass: "ToolMold",
+	behaviors: [
+		{ name: "Lockable" },
+		{ name: "UnstableFalling" }
+	],
+	entityBehaviors: [{ name: "TemperatureSensitive" }],
+	variantgroups: [
+		{ code: "color", states: ["blue", "fire", "black", "brown", "cream", "gray", "orange", "red", "tan", ] },
+		{ code: "materialtype", states: ["fired"] },
+		{ code: "size", states: ["small", "medium", "large"] }
+	],
+	shape: { base: "block/clay/mold/ingotbatch{size}" },
+	textures: {  floor: { base: "game:block/clay/hardened/{color}" }, other: { base: "game:block/clay/hardened/{color}" } },
+	attributes: {
+		reinforcable: true,
+		shatteredShape: { base: "game:block/clay/mold/shattered-ingot" },
+		onTongTransform: {
+			translation: { x: -0.88, y: -0.925, z: -0.7 },
+			rotation: { x: 3, y: 7, z: 75 },
+			scale: 0.68
+		},
+		shelvableByType: {
+			"*-large": false,
+			"*": "SingleCenter"
+		},
+		handbook: {
+			groupBy: ["batchmold-*-{type}-*"]
+		}
+	},
+	attributesByType: {
+		"batchmold-*-fired-small": {
+			requiredUnits: 300,
+			fillHeight: 2,
+			fillQuadsByLevel: [
+				{ x1: 2, z1: 3.5, x2: 14, z2: 11.5 }
+			],
+			drop: { type: "item", code: "game:ingot-{metal}", stacksize: 3 },
+		},
+		"batchmold-*-fired-medium": {
+			requiredUnits: 400,
+			fillHeight: 3,
+			fillQuadsByLevel: [
+				{ x1: 2, z1: 3.5, x2: 14, z2: 11.5 }
+			],
+			drop: { type: "item", code: "game:ingot-{metal}", stacksize: 4 },
+		},
+		"batchmold-*-fired-large": {
+			requiredUnits: 1200,
+			fillHeight: 7,
+			fillQuadsByLevel: [
+				{ x1: 2, z1: 1.5, x2: 14, z2: 13.5 }
+			],
+			drop: { type: "item", code: "game:ingot-{metal}", stacksize: 12 },
+		},
+	},
+	blockmaterial: "Ceramic",
+	creativeinventory: { "general": ["*"], "construction": ["*"] },
+	replaceable: 700,
+	resistance: 2,
+	maxStackSize: 8,
+	lightAbsorption: 0,
+	sounds: {
+		walk: "game:walk/stone",
+	},
+	collisionboxByType:{
+		"*-small": { x1: 0, y1: 0, z1: 0, x2: 1, y2: 0.1875, z2: 1 },
+		"*-medium": { x1: 0, y1: 0, z1: 0, x2: 1, y2: 0.25, z2: 1 },
+		"*-large": { x1: 0, y1: 0, z1: 0, x2: 1, y2: 0.5, z2: 1 },
+	},
+	selectionboxByType:{
+		"*-small": { x1: 0, y1: 0, z1: 0, x2: 1, y2: 0.1875, z2: 1 },
+		"*-medium": { x1: 0, y1: 0, z1: 0, x2: 1, y2: 0.25, z2: 1 },
+		"*-large": { x1: 0, y1: 0, z1: 0, x2: 1, y2: 0.5, z2: 1 },
+	},
+	sideopaque: { all: false },
+	sidesolid: { all: false },
+	heldTpIdleAnimationByType: {
+		"*-large": "holdbothhandslarge"
+	},
+	heldTpUseAnimationByType: {
+		"*-large": "twohandplaceblock"
+	},
+	guiTransformByType:{
+		"*-large": {
+			rotation: { x: -22.5937, y: -45.2968, z: 0 },
+			origin: { x: 0.5, y: 0.35, z: 0.5299 },
+			scale: 1.33
+		},
+		"*": {
+			rotation: { x: -22.5937, y: -45.2968, z: 0 },
+			origin: { x: 0.5, y: 0.175, z: 0.5299 },
+			scale: 1.5
+		},
+	},
+	tpHandTransformByType:{
+		"*-large": {
+			translation: { x: -0.8, y: 0, z: -0.4 },
+			rotation: { x: -83, y: 5, z: -102 },
+			origin: { x: 0.5, y: 0.2, z: 0.5 },
+			scale: 0.65
+		},
+		"*": {
+			translation: { x: -0.75, y: -0.6, z: -1.05 },
+			rotation: { x: -64, y: -81, z: -1 },
+			scale: 0.75
+		},
+	},
+	fpHandTransform: {
+		translation: { x: 0, y: 0, z: 0 },
+		rotation: { x: 15, y: -38, z: -2 },
+		origin: { x: 0.5, y: 0.2, z: 0.5 }
+	},
+	groundTransform: {
+		translation: { x: 0, y: 0, z: 0 },
+		rotation: { x: 0, y: -45, z: 0 },
+		origin: { x: 0.5, y: 0, z: 0.5 },
+		scale: 2.2
+	}
+}
