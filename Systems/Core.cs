@@ -1,4 +1,3 @@
-﻿using BatchProductionMolds.ModContent;
 using System;
 using Vintagestory.API.Client;
 using Vintagestory.API.Common;
@@ -6,7 +5,7 @@ using Vintagestory.API.Server;
 
 namespace BatchProductionMolds
 {
-    public class BatchProductionMoldsModSystem : ModSystem
+    public class BatchProductionMoldsCoreSystem : ModSystem
     {
         ICoreAPI? api;
         ICoreClientAPI? capi;

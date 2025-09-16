@@ -1,9 +1,8 @@
-﻿using Vintagestory.API.Client;
+using Vintagestory.API.Client;
 using Vintagestory.API.Common;
-using Vintagestory.API.Util;
 using Vintagestory.GameContent;
 
-namespace BatchProductionMolds.ModContent
+namespace BatchProductionMolds
 {
     public class BlockBatchMold : BlockToolMold
     {
