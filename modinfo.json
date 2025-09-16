@@ -7,7 +7,7 @@
     "DavidLokison"
   ],
   "description": "Adds 'Vanilla+' batch molds for casting multiple of the same work piece in one spot.",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "dependencies": {
     "game": "1.21.0"
   }
