@@ -1,3 +1,2 @@
-obj/
-bin/
-dist/
+/obj/
+/bin/
