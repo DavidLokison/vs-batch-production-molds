@@ -79,7 +79,7 @@ jobs:
           sparse-checkout-cone-mode: false
       - name: Extract Release Notes
         shell: bash
-        run: grep -Pzoe '(?<=\n## \[Unreleased]\n\n)(.*\n)*?(?=\n## )' CHANGELOG.md > CHANGELOG.md
+        run: grep -Pzoe '(?<=\n## \[Unreleased]\n\n)(.*\n)*?(?=\n## )' CHANGELOG.md > RELEASE.md
       - name: Publish Draft Release
         env:
           GH_TOKEN: ${{ github.token }}
@@ -87,5 +87,5 @@ jobs:
           --repo ${{ github.repository }}
           --target ${{ needs.commit.outputs.commit }}
           --draft
-          --notes-file CHANGELOG.md
+          --notes-file RELEASE.md
           --title "${{ needs.commit.outputs.project-name }} ${{ needs.commit.outputs.project-tag }}"
