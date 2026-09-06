@@ -71,6 +71,15 @@ jobs:
         uses: actions/download-artifact@v8
         with:
           skip-decompress: true
+      - name: Checkout Changelog
+        uses: actions/checkout@v7
+        with:
+          ref: ${{ github.sha }}
+          sparse-checkout: CHANGELOG.md
+          sparse-checkout-cone-mode: false
+      - name: Extract Release Notes
+        shell: bash
+        run: grep -Pzoe '(?<=\n## \[Unreleased]\n\n)(.*\n)*?(?=\n## )' CHANGELOG.md > CHANGELOG.md
       - name: Publish Draft Release
         env:
           GH_TOKEN: ${{ github.token }}
@@ -78,4 +87,5 @@ jobs:
           --repo ${{ github.repository }}
           --target ${{ needs.commit.outputs.commit }}
           --draft
+          --notes-file CHANGELOG.md
           --title "${{ needs.commit.outputs.project-name }} ${{ needs.commit.outputs.project-tag }}"
